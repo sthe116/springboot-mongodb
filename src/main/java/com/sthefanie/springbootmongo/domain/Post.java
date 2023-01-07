@@ -1,5 +1,6 @@
 package com.sthefanie.springbootmongo.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
@@ -9,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.sthefanie.springbootmongo.dto.AuthorDTO;
 
 @Document
-public class Post {
+public class Post implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private String id;
